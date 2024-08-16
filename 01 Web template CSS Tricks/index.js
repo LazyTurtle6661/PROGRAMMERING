@@ -9,7 +9,8 @@ function setup(){
     select('#page' + currentPage).addClass('visible')
 
     pages = selectAll('.page')
-    // Nu kan man se at pages er blevet til en liste med alle class = page ting
+    // Nu kan man se at pages er blevet til en liste med alle class = page ting //
+    //Hallo?
     console.log(pages.length)
 
 }

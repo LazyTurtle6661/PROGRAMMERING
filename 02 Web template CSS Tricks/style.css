@@ -36,16 +36,36 @@
     color: white;   
 }
 
+.halfbox{
+    grid-template-columns: 1fr 1fr;
+}
+
+#rightimage{
+    height: 100%;
+    width: 100%;
+    background-image: url(./assets/nasa-8Hjx3GNZYeA-unsplash.jpg);
+    background-size: cover;
+
+}
+
 #page1{
     background-color: lightskyblue;
 }
 
 #page2{
-    background-color: crimson;
+    background-color: gray;
 }
 
 #page3{
     background-color: purple;
+
+    grid-template-columns: 4fr 2fr 1fr;
+}
+
+#page3 div{
+    width: 100%;
+    height: 100%;
+
 }
 
 #page4{

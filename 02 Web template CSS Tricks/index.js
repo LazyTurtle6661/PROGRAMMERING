@@ -1,7 +1,8 @@
 
 
-let currentPage = 2
+let currentPage = 3
 let pages // Array med alle elementer 
+let colors = ['red', 'green', 'blue', 'lightgreen', 'orange', 'lightcyan', 'lightgrey', 'lightblue']
 
 function setup(){
     console.log("P5.js er loaded")
@@ -13,6 +14,14 @@ function setup(){
     //Hallo?
     console.log(pages.length)
 
+    // Lav en masser diver, vi kommer ind i page 3
+    for(c of colors){
+        //console.log(c)
+        let div = createDiv()
+        div.style('background-color', c)
+
+        select('#page3').child(div)
+    }
 }
 
 function shiftPage(num){

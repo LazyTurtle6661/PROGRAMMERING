@@ -1,6 +1,6 @@
 
 
-let currentPage = 3
+let currentPage = 4
 let pages // Array med alle elementer 
 let colors = ['red', 'green', 'blue', 'lightgreen', 'orange', 'lightcyan', 'lightgrey', 'lightblue']
 

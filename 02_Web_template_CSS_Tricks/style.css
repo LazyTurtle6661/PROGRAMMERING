@@ -25,7 +25,27 @@
     height: 80%;
     display: grid;
     place-items: center;
-    border: 1px solid
+    border: 1px solid;
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+    color: rgb(125, 0, 156);
+}
+
+.fixed{
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    font-size: 4rem;
+    font-variant: small-caps;
+    text-shadow: 4px 4px black;
+
+    color: aliceblue;
 }
 
 #imagebox{
@@ -69,7 +89,7 @@
 }
 
 #page4{
-    background-color: gainsboro;
+    background-color: rgb(97, 17, 17);
 }
 
 h1{

@@ -169,8 +169,6 @@ header.hidden:hover .menuitem{
     grid-template-columns: repeat(3, 2fr);
     grid-template-rows: 1fr 1fr;
 
-    margin-left: 5%;
-    margin-right: 10%;
 }
 
 #page4 #album1{

@@ -1,6 +1,6 @@
 
 
-let currentPage = 2
+let currentPage = 1
 
 let pages // Array med alle elementer 
 let menuItems // Array med alle menu punkterne

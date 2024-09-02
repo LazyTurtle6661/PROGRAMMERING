@@ -10,7 +10,7 @@ header{
     position: fixed;
     bottom:0;
     z-index:2;
-    background-color: grey;
+    background-color: darkslateblue;
     display: grid;
     grid-template-columns: repeat(4,1fr);
 
@@ -29,6 +29,7 @@ header.hidden:hover{
     width: 100%;
     height: 100%;
     font-size: 2rem;
+    color: antiquewhite;
     display: grid;
     place-items: center;
     border-right: 1px solid black;
@@ -67,6 +68,10 @@ header.hidden:hover .menuitem{
     font-size: 2rem;
 }
 
+#page2 .member1{
+    background-image: url(./assets/Maynard_James_Keenan.jpg);
+}
+
 .page{
     position: fixed;
     left: -100vw;
@@ -93,33 +98,64 @@ header.hidden:hover .menuitem{
 
 
 #page2{
-    background-color: purple;
-    grid-template-columns: 3fr 7fr;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
 }
 
-#page2 .left{
+#page2 #member1{
     width: 100%;
     height: 100%;
+    background-image: url(./assets/Maynard_James_Keenan.jpg);
+    background-size: cover;
+    border-right: 1px solid black;
 
-    display: grid;
-    place-items: center;
-    padding: 2rem;
-    background-color: whitesmoke;
-    font-size: 1.5rem;
 }
 
-#page2 .right{
+#page2 #member2{
     width: 100%;
     height: 100%;
+    background-image: url(./assets/Adam_jones.jpg);
+    background-size: cover;
+    place-items: center ;
+    border-right: 1px solid black;
 
-    display: grid;
-    grid-template-columns: 2fr 5fr 3fr;
 }
+
+
+#page2 #member3{
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/JustinChancellor.jpg);
+    background-size: cover;
+    border-right: 1px solid black;
+
+}
+
+#page2 #member4{
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/danny_carrey.png);
+    background-size: cover;
+}
+
+
+
 
 
 #page3{
     background-color: purple;
+}
 
+
+#page3 .right{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 3fr 3fr;
+}
 }
 
 #page3 div{
@@ -129,10 +165,63 @@ header.hidden:hover .menuitem{
 }
 
 #page4{
-    background-color: rgb(97, 17, 17);
+    background-color: gray;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: 1fr 1fr;
+
+    margin-left: 5%;
+    margin-right: 10%;
 }
 
-h1{
-    color:greenyellow;
-    font-family: Raleway;
+#page4 #album1{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background-image: url(./assets/Tool\ undertow.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+#page4 #album2{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background-image: url(./assets/tool\ ænima.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+#page4 #album3{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background-image: url(./assets/Lateralus.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+#page4 #album4{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background-size: contain;
+    background-image: url(./assets/10000days.jpg);
+    background-repeat: no-repeat;
+
+}
+#page4 #album5{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background-image: url(./assets/tool\ fear\ inoculum.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
 }

@@ -3,7 +3,12 @@ let m5NameDiv, m5StatusDiv
 // Denne variabel bliver brugt til at håndtere mqtt
 let client
 
+// state variablen
+let state
+
 function setup() {
+    createCanvas(windowWidth, windowHeight)
+
     // tag fat i de to HTML elementer vi ville modificerer 
     m5NameDiv = select('#m5_1 header')
     m5StatusDiv = select('#m5_1 .status')
@@ -18,7 +23,7 @@ function setup() {
 
 
     // nu vi vi gerne subscribe på et emne
-    client.subscribe('programmering')
+    client.subscribe('state_machine')
 
     // og så skal vi sætte den LISTENER op som skal modtage input fra MQTT
     client.on('message', function(emne, besked){
@@ -29,16 +34,29 @@ function setup() {
         // det vi får fra m5'eren er i det her eksempel JSON format
         let json = JSON.parse(besked.toString())
         // nu kan jeg bruge data fra JSON objektet
-        console.log(json.name, 'her er navnet for json objektet')
+        console.log(json.id, 'her er navnet for json objektet')
         // SÅ kan vi opdatere HTML dokumentet
-        m5NameDiv.html(json.name)
-        m5StatusDiv.html(json.status)
+        m5NameDiv.html(json.id)
+        m5StatusDiv.html(json.state)
 
-        // hvis STATUS er TRUE, skal vi give klassen "true"
-        if(json.status){
-            m5StatusDiv.addClass("true")
-        }else{
-            m5StatusDiv.removeClass("true")
-        }
+        state = json.state
+
     })
 }
+
+
+function draw({
+    clear()
+    if(state == 'setup'){
+        fill('orange')
+        noStroke()
+        ellipse(random(80,120), 100, 50)
+        text('setup - waiting for something', 100, 80)
+    }
+    if(state == 'game'){
+        fill('lightblue')
+        noStroke()
+        ellipse(random(width/2-20, width/2 + 20), 100, 50)
+        text('game on', 100, 80)
+    }
+})

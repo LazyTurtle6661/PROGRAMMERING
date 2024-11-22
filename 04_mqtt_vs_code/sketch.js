@@ -45,7 +45,7 @@ function setup() {
 }
 
 
-function draw({
+function draw(){
     clear()
     if(state == 'setup'){
         fill('orange')
@@ -59,4 +59,4 @@ function draw({
         ellipse(random(width/2-20, width/2 + 20), 100, 50)
         text('game on', 100, 80)
     }
-})
+}
